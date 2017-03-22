@@ -30,8 +30,8 @@ public class Subscriber implements TibrvMsgCallback {
 	}
 	
 	public void receive() throws TibrvException, InterruptedException {
-		//Tibrv.open(Tibrv.IMPL_NATIVE);
-		Tibrv.open(Tibrv.IMPL_JAVA);
+		Tibrv.open(Tibrv.IMPL_NATIVE);
+		//Tibrv.open(Tibrv.IMPL_JAVA);
 		TibrvRvdTransport transport = new TibrvRvdTransport(service, network, daemon);
 		TibrvQueue queue = new TibrvQueue();
 		TibrvCmQueueTransport cmqTransport = new TibrvCmQueueTransport(transport, queueName);
